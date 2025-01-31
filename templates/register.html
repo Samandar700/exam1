@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ro'yxatdan O'tish</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .register-form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .register-form h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .register-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .register-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .register-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .register-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form class="register-form" method="POST">
+        {% csrf_token %}
+        <h2>Ro'yxatdan O'tish</h2>
+        <label for="name">Ism</label>
+        <input type="text" id="name" name="name" placeholder="Ismingizni kiriting" required>
+        
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Username kiriting" required>
+        
+        <label for="password">Parol</label>
+        <input type="password" id="password" name="password" placeholder="Parolni kiriting" required>
+        
+        <button type="submit">Ro'yxatdan O'tish</button>
+    </form>
+</body>
+</html>
