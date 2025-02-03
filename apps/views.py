@@ -112,7 +112,6 @@ class ContactView(TemplateView):
     template_name = 'contact.html'
 
 
-
 class ShopDetailView(DetailView):
     model = Product
     context_object_name = 'product'
